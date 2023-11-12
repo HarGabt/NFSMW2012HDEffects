@@ -1,3 +1,8 @@
+# FORK NOTE
+The very commit made in this fork is for testing purposes only. Neither I, nor the author of the original repository (Aero_) do condone cheating in multiplayer games whatsoever.
+
+I do not take any responsibility for using this version in multiplayer sessions.
+
 # NFSMW2012 HD Effects
 
 ## How To Use  

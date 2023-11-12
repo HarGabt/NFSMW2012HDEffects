@@ -1,5 +1,6 @@
 #pragma once
 
+/*
 DWORD IsMultiplayer;
 
 void __declspec(naked) MultiplayerCheckCodeCave()
@@ -14,6 +15,7 @@ void __declspec(naked) MultiplayerCheckCodeCave()
 		ret
 	}
 }
+*/
 
 DWORD RefreshGraphicsIsSafe;
 
@@ -689,7 +691,7 @@ void __declspec(naked) WreckResistanceCodeCave1()
 		movzx eax, word ptr ds : [edi + 0x0C]
 		movzx edx, word ptr ds : [edi + 0x12]
 		movzx ecx, word ptr ds : [edi + 0x14]
-		cmp byte ptr ds : [IsMultiplayer], 0x01
+		// cmp byte ptr ds : [IsMultiplayer], 0x01
 		je ExitCode
 
 		mov dword ptr ds : [Wreck_Resistance_1], eax
@@ -724,7 +726,7 @@ void __declspec(naked) WreckResistanceCodeCave2()
 	{
 		movzx eax, word ptr ds : [edi + 0x0E]
 		movss dword ptr ds  : [esp + 0x10], xmm0
-		cmp byte ptr ds : [IsMultiplayer], 0x01
+		// cmp byte ptr ds : [IsMultiplayer], 0x01
 		je ExitCode
 
 		mov dword ptr ds : [Wreck_Resistance_4], eax
@@ -747,7 +749,7 @@ void __declspec(naked) WreckResistanceCodeCave3()
 	{
 		movzx ecx, word ptr ds : [edi + 0x16]
 		movss dword ptr ds : [esp + 0x14], xmm0
-		cmp byte ptr ds : [IsMultiplayer], 0x01
+		// cmp byte ptr ds : [IsMultiplayer], 0x01
 		je ExitCode
 
 		mov dword ptr ds : [Wreck_Resistance_5], eax
@@ -769,7 +771,7 @@ void __declspec(naked) WreckResistanceCodeCave4()
 	__asm
 	{
 		movzx edx, word ptr ds : [edi + 0x10]
-		cmp byte ptr ds : [IsMultiplayer], 0x01
+		// cmp byte ptr ds : [IsMultiplayer], 0x01
 		je ExitCode
 
 		mov dword ptr ds : [Wreck_Resistance_6], eax
@@ -793,7 +795,7 @@ void __declspec(naked) WreckResistanceCodeCave5()
 	{
 		movzx edx, byte ptr ds : [edi + 0x18]
 		movss dword ptr ds : [esp + 0x18], xmm0
-		cmp byte ptr ds : [IsMultiplayer], 0x01
+		// cmp byte ptr ds : [IsMultiplayer], 0x01
 		je ExitCode
 
 		mov dword ptr ds : [Wreck_Resistance_7], edx

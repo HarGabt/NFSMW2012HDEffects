@@ -53,10 +53,12 @@ void Init()
 	ToggleScreenDirthotkey = iniReader.ReadInteger("HOTKEYS", "ToggleScreenDirthotkey", 118); // F7
 	ToggleTimeOfDayhotkey = iniReader.ReadInteger("HOTKEYS", "ToggleTimeOfDayhotkey", 119); // F8
 
+/*
 	{
 		injector::MakeJMP(0x4C1EC5, MultiplayerCheckCodeCave, true);
 		injector::MakeNOP(0x4C1ECA, 4, true);
 	}
+*/
 
 	if (Resolution)
 	{
@@ -271,12 +273,12 @@ void Init()
 		if (WreckResistance >= 0)
 		{
 			WreckResistanceMultiplier = WreckResistance;
-
+/*
 			if (WreckResistanceMultiplier > 4.0f)
 			{
 				WreckResistanceMultiplier = 4.0f;
 			}
-
+*/
 			injector::MakeCALL(0x8FFBC8, WreckResistanceCodeCave1);
 			injector::MakeNOP(0x8FFBCD, 7, true);
 			injector::MakeCALL(0x8FFBDB, WreckResistanceCodeCave2);
